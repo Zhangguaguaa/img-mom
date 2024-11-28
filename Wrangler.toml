@@ -1,0 +1,46 @@
+# 你的 Cloudflare 账户ID
+# 必填
+account_id = "0f2eeb6f8c894a5e8aff7803aaa34aaf"
+
+[vars]
+# 填写你创建的 Telegram Bot Token
+# 必填
+TG_BOT_TOKEN = "7608456528:AAFjBdaKyj1xpo9NXsI0e6CykjUBrMz9tw8"
+# 长度为 1-256 字符，字符集为 A-Z,a-z,0-9,_,- 的字符串，用于防止 Webhook 接口被除当前Telegram Bot以外的应用恶意调用
+# 非必填，但强烈推荐填写
+TG_WEBHOOK_SECRET_TOKEN = "<string>"
+# Telegram Bot 的所有者用户名
+# 必填
+TG_BOT_OWNER_USERNAME = "Xiizerox"
+# 是否允许非 Owner 用户使用 Telegram 图床 (注意：即使设置为 true, 非 Owner 用户也不能使用 CloudflareR2/BackblazeB2 图床)
+# 非必填
+TG_BOT_ALLOW_ANYONE = "true"
+
+# Cloudflare R2 自定义域名
+# 启用 Cloudflare R2 图床时，必填
+R2_CUSTOM_DOMAIN = "img.20040321.xyz"
+# Backblaze B2 keyID
+# 启用 Backblaze B2 图床时，必填
+B2_KEY_ID = "<string>"
+# Backblaze B2 secretKey
+# 启用 Backblaze B2 图床时，必填
+B2_SECRET_KEY = "<string>"
+# Backblaze B2 Endpoint
+# 启用 Backblaze B2 图床时，必填
+B2_ENDPOINT = "<string>"
+# Backblaze B2 Bucket名
+# 启用 Backblaze B2 图床时，必填
+B2_BUCKET = "<string>"
+# Backblaze B2 自定义域名
+# 非必填
+B2_CUSTOM_DOMAIN = "<string>"
+
+[[kv_namespaces]]
+# kv ID， 详见 https://developers.cloudflare.com/workers/runtime-apis/kv
+# 必填
+id = "18cf2a72f95e4d3d8419c4de87adbb7f"
+
+[[r2_buckets]]
+# r2 Bucket名，详见 https://developers.cloudflare.com/r2/api/workers/workers-api-usage/
+# 必填
+bucket_name = "imgg"
